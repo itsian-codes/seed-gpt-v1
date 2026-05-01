@@ -1,0 +1,79 @@
+{
+  "config": {
+    "adversarial_loss_weight": 0.1,
+    "batch_size": 8,
+    "beta": 0.5,
+    "classification_loss_weight": 1.0,
+    "device": "cpu",
+    "early_stop_patience": 1,
+    "edit_scale": 0.15,
+    "epochs": 1,
+    "few_shot_per_class": 3,
+    "hidden_dim": 16,
+    "imagined_trajectories": 2,
+    "lr_pretrain": 0.003,
+    "lr_prompt": 0.001,
+    "max_nodes": 8,
+    "min_nodes": 5,
+    "num_gnn_layers": 2,
+    "num_graphs": 30,
+    "num_node_features": 8,
+    "policy_hidden_dim": 16,
+    "ppo_clip": 0.2,
+    "pretrain_epochs": 1,
+    "prompt_hidden_dim": 16,
+    "reward_loss_weight": 0.5,
+    "rollout_length": 1,
+    "run_dir": "runs/smoke",
+    "seed": 7,
+    "synthetic_batch_size": 2,
+    "synthetic_buffer_size": 32,
+    "synthetic_policy_weight": 0.5,
+    "transition_loss_weight": 0.1
+  },
+  "data_sizes": {
+    "pretrain": 25,
+    "test": 15,
+    "train": 5,
+    "val": 10
+  },
+  "variants": {
+    "full": {
+      "best_epoch": 0,
+      "best_test": {
+        "acc": 0.7333333333333333,
+        "macro_f1": 0.4230769230769231,
+        "roc_auc": 0.7272727272727273
+      },
+      "best_val_score": 0.48,
+      "elapsed_sec": 0.03998541831970215,
+      "history": [
+        {
+          "epoch": 0,
+          "test": {
+            "acc": 0.7333333333333333,
+            "macro_f1": 0.4230769230769231,
+            "roc_auc": 0.7272727272727273
+          },
+          "train": {
+            "adv_loss": 0.0,
+            "buffer_size": 2.0,
+            "cls_loss": 0.663498044013977,
+            "loss": 0.6591275334358215,
+            "mean_real_reward": -0.03121953085064888,
+            "ppo_loss": -0.001312518143095076,
+            "reward_loss": 0.0012996456352993846,
+            "syn_loss": -0.012709617614746094,
+            "train_loss": 0.6415361166000366,
+            "transition_loss": 0.026469921693205833
+          },
+          "val": {
+            "acc": 0.5,
+            "macro_f1": 0.3333333333333333,
+            "roc_auc": 0.48
+          }
+        }
+      ]
+    }
+  }
+}
